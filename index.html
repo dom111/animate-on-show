@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animate-on-show example</title>
+        <link rel="stylesheet" href="animations.css" media="screen" charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="jquery.animateOnShow.min.js" charset="utf-8"></script>
+        <style media="screen">
+            html, body {
+                height: 100%;
+            }
+
+            .page {
+                min-height: 100%;
+            }
+
+            /* custom animation effect */
+            .important {
+                color: #f00;
+                font-size: 200%;
+                -webkit-transition: all 3s ease-out;
+                -moz-transition: all 3s ease-out;
+                -o-transition: all 3s ease-out;
+                transition: all 3s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <h1 class="animate-on-show fade-in" data-animate-chain="onload">jQuery.animateOnShow</h1>
+            <p>
+                <span class="animate-on-show fade-in" data-animate-chain="onload" data-animate-delay="500">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span> <span class="animate-on-show fade-in" data-animate-chain="onload" data-animate-delay="1000">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span> <span class="animate-on-show fade-in" data-animate-chain="onload" data-animate-delay="1500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span> <span class="animate-on-show fade-in" data-animate-chain="onload" data-animate-delay="2000">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            </p>
+            <p class="animate-on-show fade-in" data-animate-chain="onload" data-animate-delay="2500">
+                Please continue scrolling down the page to see the animations...
+            </p>
+        </div>
+        <div class="page">
+            <p class="animate-on-show fade-in">
+                Lets show off the different animations!
+            </p>
+            <p class="animate-on-show slide-in-from-above">
+                Lets show off the different animations! This is visible 400 pixels too soon, but it won't animate until you're at the right place because of the custom offset specified in <code>settings.custom</code>, coupling this with a <code>fade-in</code> class could be used to avoid this being seen...
+            </p>
+            <p class="animate-on-show slide-in-from-below">
+                Lets show off the different animations! Just like the <code>slide-in-from-above</code> element, this is visible loewr on the page too, but will animate at the right time due to the similar properties in <code>settings.custom</code>.
+            </p>
+            <p class="animate-on-show slide-in-from-left">
+                Lets show off the different animations! No calculations are needed for horizontal movement, but you might want to apply overflow hidden on the container to avoid seeing the element in the wrong place...
+            </p>
+            <p class="animate-on-show slide-in-from-right">
+                Lets show off the different animations!
+            </p>
+        </div>
+        <div class="page">
+            <h1>List example with multiple animations</h1>
+            <ul>
+                <li class="animate-on-show slide-in-from-left fade-in" data-animate-chain="bullets">This is important</li>
+                <li class="animate-on-show slide-in-from-left fade-in" data-animate-chain="bullets" data-animate-delay="200">This is important too</li>
+                <li class="animate-on-show slide-in-from-left fade-in" data-animate-chain="bullets" data-animate-delay="400">This is at least as important</li>
+                <li class="animate-on-show slide-in-from-left fade-in" data-animate-chain="bullets" data-animate-delay="600">This is probably the most important</li>
+                <li class="animate-on-show slide-in-from-left fade-in important" data-animate-chain="bullets" data-animate-delay="800">No wait, <strong>THIS</strong> is, it's red and it moves more slowly!</li>
+            </ul>
+            <p class="animate-on-show fade-in" data-animate-chain="bullets" data-animate-delay="3500">
+                This page only contains very basic examples, but this is intended more as a basic way to enable you to control your CSS animations than a ready to use plugin, although it will work as such.
+            </p>
+            <p class="animate-on-show fade-in" data-animate-chain="bullets" data-animate-delay="4000">
+                <em>Please</em> don't over-use this effect, it can be useful to draw attention to things, but could easily become frustrating for your visitors...
+            </p>
+        </div>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-5273748-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
